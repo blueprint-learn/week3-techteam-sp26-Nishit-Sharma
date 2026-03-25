@@ -5,6 +5,6 @@
 --   - Include all rows from `resources`
 --   - Order by id ascending (so results are easy to read and test)
 
--- SELECT id, name, category, address, contact_email
--- FROM resources
--- ORDER BY id ASC;
+SELECT id, name, category, address, contact_email
+FROM resources
+ORDER BY id ASC;
