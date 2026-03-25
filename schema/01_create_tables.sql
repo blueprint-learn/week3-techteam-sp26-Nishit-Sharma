@@ -19,10 +19,19 @@
 --
 --   3) Add a FOREIGN KEY so every referrals.resource_id must match resources.id
 --   4) Create referrals AFTER resources (Postgres needs the referenced table first)
---
--- TODO: Replace the placeholders below with real CREATE TABLE statements.
---       Delete the dummy line once your statements are in place.
 
--- TODO: CREATE TABLE resources ( ... );
+CREATE TABLE resources (
+  id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  category TEXT,
+  address TEXT,
+  contact_email TEXT
+);
 
--- TODO: CREATE TABLE referrals ( ... );
+CREATE TABLE referrals (
+  id SERIAL PRIMARY KEY,
+  family_name TEXT NOT NULL,
+  resource_id INTEGER NOT NULL REFERENCES resources (id),
+  referral_date DATE,
+  notes TEXT
+);

@@ -5,5 +5,8 @@
 --   - Match the exact category name: Food
 --   - Return all columns from `resources`
 --   - Order by id ascending
---
--- TODO: Write your query below.
+
+SELECT id, name, category, address, contact_email
+FROM resources
+WHERE category = 'Food'
+ORDER BY id ASC;

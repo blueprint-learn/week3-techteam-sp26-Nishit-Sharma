@@ -6,5 +6,10 @@
 --       - referrals.family_name  AS family_name
 --       - resources.name         AS resource_name
 --   - Order by referrals.id ascending
---
--- TODO: Write your query below.
+
+SELECT
+  referrals.family_name AS family_name,
+  resources.name AS resource_name
+FROM referrals
+JOIN resources ON referrals.resource_id = resources.id
+ORDER BY referrals.id ASC;

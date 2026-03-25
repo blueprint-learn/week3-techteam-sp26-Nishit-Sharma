@@ -6,5 +6,8 @@
 --   - Must be case-insensitive (use ILIKE, or LOWER(...) with LIKE)
 --   - Return columns: id, name, category
 --   - Order by id ascending
---
--- TODO: Write your query below.
+
+SELECT id, name, category
+FROM resources
+WHERE name ILIKE '%pantry%'
+ORDER BY id ASC;
